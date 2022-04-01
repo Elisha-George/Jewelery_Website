@@ -1,0 +1,7 @@
+TO hide scroll
+
+make all sections and headers ets 
+overflow: hidden
+
+mobile Range
+min-width: 300  max-width: 519

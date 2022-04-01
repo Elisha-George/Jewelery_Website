@@ -1,0 +1,857 @@
+@import url(http://db.onlinewebfonts.com/c/b903a10cbd02c30f0de8a49886eddcc0?family=CooperBTW01-Bold);
+@font-face {font-family: "CooperBTW01-Bold"; src: url("http://db.onlinewebfonts.com/t/b903a10cbd02c30f0de8a49886eddcc0.eot"); src: url("//db.onlinewebfonts.com/t/b903a10cbd02c30f0de8a49886eddcc0.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/b903a10cbd02c30f0de8a49886eddcc0.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/b903a10cbd02c30f0de8a49886eddcc0.woff") format("woff"), url("//db.onlinewebfonts.com/t/b903a10cbd02c30f0de8a49886eddcc0.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/b903a10cbd02c30f0de8a49886eddcc0.svg#CooperBTW01-Bold") format("svg"); }
+
+html, body{
+    overflow: visible;
+    overflow-x: hidden;
+}
+/* HEADINGS */
+.h1Heading{
+    line-height: 22px;
+    font-family: "CooperBTW01-Bold";
+    font-size: 50px;
+    line-height: 43px;
+}
+
+.h3subHeading{
+
+    font-family: "CooperBTW01-Bold";
+    font-size: 25px;
+    color: #adac77;
+}
+
+
+
+.logo{
+    margin-top: 20px;
+
+}
+
+.navigation{
+    text-align: center;  
+    padding-top: 30px;
+}
+.navigation ul{
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.navigation ul li a{
+    color: black;
+    list-style: none;
+   
+    /* font-weight: bold; */
+    color: black;
+    font-size:16px;  
+    padding: 0 20px ;
+    font-size: 18px;
+    /* border-left: 2px solid black; */
+}
+#about,#contact,#shop{
+    border-left: 2px solid black;
+
+
+}
+
+.navigation ul li {
+  
+    display: inline-block;
+ 
+}
+.icons{
+    text-align: right;
+    padding-top: 30px;
+}
+.icons ul li{
+    display: inline-block;
+}
+.icons ul li{
+    margin-left: 20px;
+    width: 25px;
+    height: 25px;
+}
+
+/* BANNER SECTION */
+
+.banner{
+    height: 86vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image:url("../images/banner.png") ;
+    
+    background-image: linear-gradient( rgba(65, 37, 37, 0.5), rgba(0, 0, 0, 0.5) ),url("../images/banner.png");
+margin-left: auto;
+    margin-top: 13px;
+    background-attachment: fixed;
+ 
+}
+
+
+.jumbotron{
+    background-color: transparent;
+}
+.mid{
+    height: 50%;
+    width: 50%;
+    border: 6px solid white;
+    position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  /* font-weight: bolder; */
+  text-align: center;
+  padding-top: 35px; 
+}
+
+
+
+.mid h1{
+    text-shadow: 4px 3px #000000;
+}
+.mid p{
+    line-height: 28px;
+    font-size: 15px;
+    margin-top: 30px;
+   
+}
+.mid button{
+
+    width: 130px;
+    height: 50px;
+    margin-top: 28px;
+    /* color: #adac77; */
+    background-color:  #adac77;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+@media screen and (max-width: 1000px){
+    .mid{
+        height: 50%;
+
+    }
+    
+}
+
+/* MAIN SECTION */
+
+.main{
+    margin-top: 80px;
+    height: 100%;
+}
+.leftPara{
+    padding-left: 50px;
+    padding-right: 54px;
+}
+
+
+.leftPara p{
+    line-height: 30px;
+    text-align:left;
+}
+.main button{
+    width: 130px;
+    height: 50px;
+    margin-top: 5px;
+    background-color:  #adac77;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+.rightPic{
+    background-image: url('/images/butterfly.png');
+    height: 120vh;
+    background-repeat: no-repeat;
+}
+.rightPic img{
+    margin-left: 80px;
+    margin-top: 80px;
+    margin-left: 301px;
+}
+
+
+
+/* PRODUCTS SECTION */
+
+
+.products
+{
+    background-color: rgb(243 243 243);
+    margin-top: 80px;
+    padding-top: 40px;
+}
+.productHead{
+    margin-top: 40px;
+}
+
+
+/* 
+.products h3{
+    text-align: center;
+    font-family: "CooperBTW01-Bold";
+    font-size: 23px;
+    color: #9c9b6b;
+    line-height: 5px;
+} */
+
+.products p{
+    text-align: center;
+    line-height: 19px;
+
+}
+
+.productDisplay{
+    margin-top: 30px;
+}
+/* .productDisplay h3{
+    text-align: center;
+    font-family: "CooperBTW01-Bold";
+    font-size: 21px;
+    color: #919064;
+    line-height: 5px;
+} */
+.btnView{
+    position: relative;
+    left: 44%;
+    /* transform: translate(-50,-50); */
+    margin-top: 15px;
+    margin-bottom: 30px;
+
+}
+.products button{
+
+    width: 130px;
+    height: 50px;
+    margin-top: 5px;
+    background-color: transparent;
+    border: 3px solid  #adac77;
+    color:  #adac77;
+    font-weight: bold;
+}
+
+
+/* CATAGORIES */
+
+.catagories{
+    
+    background-color: white;
+    margin-top: 43px;
+}
+.catagorieDisplay{
+    margin-top: 30px;
+
+}
+
+
+.catagories h3{
+    text-align: center;
+    font-family: "CooperBTW01-Bold";
+    font-size: 23px;
+    color: #9c9b6b;
+    line-height: 5px;
+}
+
+.catagories p{
+    text-align: center;
+    line-height: 19px;
+}
+
+.newsletter {
+
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+    
+}
+
+.newsletter h1{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 50px;
+}
+
+.newsletter div{
+    margin: auto;
+    width: 50%
+
+}
+.newsletter div {
+    height: 50px;
+    border-radius: 0;
+
+}
+.newsletter div input{
+    height: 50px;
+    background-color: rgb(243 243 243);
+    border-radius: 0;
+}
+
+/* Placeholder propertity works without bootstrp */
+
+/* ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    /* color:    #909;
+    opacity: 11;
+} */  
+ 
+.btnSub{
+    color: white;
+    background-color: #9c9b6b;
+    width: 30px;
+    border-radius: 0;
+    width: 143px;
+}
+
+.line{
+    border-top: 3px solid black;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    
+}
+
+footer{
+    background-color: rgb(243 243 243);
+    /* width: 100%; */
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.footerMenue ul li{
+display: inline-block;
+align-items: center;
+}
+.Domain{
+    text-align: center;
+}
+#navLast
+{
+    align-items: center;
+}
+/* Footer nav items */
+
+.footNav{
+    text-align: center;  
+    padding-top: 30px;
+}
+.footNav ul{
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.footNav ul li a{
+    color: black;
+    list-style: none;
+   
+    /* font-weight: bold; */
+    color: black;
+    font-size:8px;  
+    padding: 0 20px ;
+    font-size: 18px;
+    /* border-left: 2px solid black; */
+}
+
+.footNav ul li {
+  
+    display: inline-block;
+ 
+}
+/* Footer nav items */
+
+/* Social Media Icons */
+#SocialMediaIcons {
+    display      : flex;
+    margin-bottom: 50px;
+    justify-content: center;
+    margin-top: 30px;
+    
+}
+
+#SocialMediaIcons #twitter,
+#linkdin {
+    color           : white;
+    border-radius   : 31px;
+    padding         : 15px;
+    font-size       : 18px;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    background-color: #666666;
+
+}
+
+#facebook {
+    width           : 47px;
+    margin          : 0px 25px;
+    color           : white;
+    border-radius   : 31px;
+    padding         : 15px;
+    font-size       : 18px;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    background-color: blue;
+}
+
+
+
+/* -----------------------------------------------ABOUT US PAGE--------------------------------- */
+/* about us banner */
+.aboutbanner{
+    height: 75vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-image:url("../images/aboutbanner.jpg") ; */
+    
+    
+    background-image: linear-gradient( rgba(224, 209, 209, 0.5), rgba(0, 0, 0, 0.5) ),url("../images/aboutbanner2.jpg");
+margin-left: auto;
+background-attachment: fixed;
+    margin-top: 13px;
+}
+
+.aboutMid{
+    height: 200px;
+    width: 30%;
+    border: 6px solid white;
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  /* font-weight: bolder; */
+  text-align: center;
+  padding-top: 35px; 
+  border-radius: 15px;
+
+}
+
+.aboutMid h1{
+    font-size: 59px;
+    /* font-family: 'Titan One', cursive; */
+    font-family: "CooperBTW01-Bold";
+    /* line-height: 43px; */
+    text-shadow: 4px 3px #000000;
+    color: white;
+    padding-top:0;
+
+}
+/* about us banner */
+
+
+/* -------------------------------------------CONTACT US------------------------- */
+
+
+/* Contact us */
+.contactbanner{
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    background-attachment: fixed;
+    
+   /* background-image: url("../images/contactUsBanner.webp"); */
+    background-image: linear-gradient( rgba(168, 107, 107, 0.582), rgba(77, 34, 34, 0.5) ),url("../images/contactUsBanner.webp");
+margin-left: auto;
+    margin-top: 13px;
+} 
+ .contactMid{
+    height: 200px;
+    width: 30%;
+    border: 6px solid white;
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding-top: 35px; 
+  border-radius: 15px;
+
+} 
+
+.contactMid h1{
+    font-size: 59px;
+    font-family: "CooperBTW01-Bold";
+    text-shadow: 4px 3px #000000;
+    color: white;
+    padding-top:0;
+
+} 
+
+
+
+ /* contact form  */
+.contactMain{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* ---------------------NEW CONTACT AND MAPS---------------------- */
+
+.contactInfo{
+    margin-top: 80px;
+    margin-bottom:0px;
+
+    padding-top: 20px;
+   
+}
+.divForm{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.formTop{
+    border-bottom: 3px solid rgb(187, 183, 183);
+    margin-bottom: 15px;
+    padding-left: 8px;
+}
+
+label{
+    margin-left: 10px;
+}
+
+.divForm form input{
+    border-radius: 20px;
+    height: 45px;
+}
+
+.MessageArea{
+    border-radius: 20px;
+    
+}
+
+.btnSubmit{
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    color: white;
+    background-color: #a8a775;
+    height: 45px;
+    width: 20%;
+    border-radius: 0;
+    border: none;
+    font-size: 20px;
+    
+}
+.btnSubmit:hover{
+    background-color: #7e7c52;
+}
+
+
+.divSocialMedia{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+
+}
+.divSocialMedia .row{
+    /* height: 80px; */
+    padding: 10px;
+}
+.mediaIcons{
+    border-bottom: 3px solid gray;
+
+}
+.divSocialMedia h5{
+    display: inline;
+}
+.faicons {
+    padding: 20px;
+    width: 54px;
+    text-align: center;
+    text-decoration: none;
+    /* margin: 5px 2px; */
+    border-radius: 50%;
+    background-color: #a8a775;
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    display: inline;
+ 
+  }
+  
+  .faicons:hover {
+      opacity: 0.7;
+      
+  }
+  
+  /* <a href="#" class="fa fa-facebook faicons"></a> */
+
+
+  /* MAPS */
+
+  .maps{
+      width: 100%;
+      margin-bottom: 30px;
+  }
+
+
+/* ---------------------NEW CONTACT AND MAPS---------------------- */
+
+/* ----------------- */
+
+/* PRODUCTS -- SHOP CSS START */
+.productbanner{
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-image:url("../images/aboutbanner.jpg") ; */
+    
+    background-attachment: fixed;
+    
+    background-image: linear-gradient( rgba(117, 112, 112, 0.5), rgba(77, 34, 34, 0.5) ),url("../images/products1.jpg");
+margin-left: auto;
+    margin-top: 13px;
+}
+
+/* PAGINATION */
+.pagination {
+    /* display: inline-block; */
+    /* justify-content: center; */
+    display: flex;
+    justify-content: center;
+
+    margin-top: 48px;
+  }
+  
+  .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  .pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+
+  .pagination a:hover:not(.active) {background-color: #ddd;}
+
+  .tabs
+  {
+      border: 2px sloid grey;
+  }
+
+  /* PRODUCTS -- SHOP CSS ENDS */
+
+
+
+
+
+  /* LANDING PAGE STARTS */
+
+  .Landingbanner{
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /* background-attachment: fixed; */
+    
+   /* background-image: url("../images/contactUsBanner.webp"); */
+    background-image: linear-gradient( rgba(168, 107, 107, 0.582), rgba(77, 34, 34, 0.5) ),url("../images/landingBanner.webp");
+margin-left: auto;
+    margin-top: 13px;
+      
+  }
+
+
+
+
+  /* LANDING PAGE STARTS */
+
+ 
+.leftProduct{
+   
+    background-image: url("/images/cat3rd.png");
+    height: 93vh;
+    /* Adjust the padding here */
+    padding: 0px 1%; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.rightProductInfo{
+    padding: 0px 3%;
+}
+.rightProductInfo p{
+    line-height: 25px;
+}
+.leftProduct img{
+    height: 103px;
+    width: 96px;
+    border: 6px solid white;
+}
+.divProduct{
+position: absolute; 
+top: 590px;
+left: 190px;
+}
+
+.checked{
+    color: orange;
+}
+.fa-star{
+
+    size: 30px;
+}
+.shipping {
+    display: inline-block;
+}
+.tag{
+    display: inline-block;  
+}
+
+.secButtons{
+    margin-top: 50px;
+ 
+}
+
+.secDetails{
+    margin-top: 30px;
+   
+}
+.secDetails .row{
+    border-top: 2px solid black;
+    padding-top: 30px;
+}
+.secDetails .row p{
+    line-height: 25px;
+    text-align: justify;
+}
+
+.ShippingBlocks{
+    border: 2px dotted black;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 30px;
+    width: 350px;
+    margin-bottom: 30px;
+}
+
+
+.secButtons{
+    margin-top: 80px;
+    margin-left: 165px;
+}
+.btnDiscription{
+ 
+    color: white;
+    background-color: #9c9b6b;
+    border: none;
+    
+}
+.btnDiscription:hover{
+    background-color:#afaf87 ;
+}
+
+.btnReview ,.btnInfo{
+    color: #9c9b6b;
+    border: 2px solid #9c9b6b;
+    background-color: white;
+}
+
+
+.secButtons button{
+
+    width: 170px;
+    height: 50px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+
+
+/* ADD TO CART CSS */
+
+.cartBanner{
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    background-attachment: fixed;
+    
+   /* background-image: url("../images/contactUsBanner.webp"); */
+    background-image: linear-gradient( rgba(34, 21, 21, 0.582), rgba(77, 34, 34, 0.5) ),url("../images/cartBanner.png");
+margin-left: auto;
+    margin-top: 13px;
+} 
+ .cartMid{
+    height: 150px;
+    width: 30%;
+    border: 6px solid white;
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding-top: 35px; 
+  border-radius: 15px;
+
+} 
+
+
+.Cart{
+    margin: 30px 0px 30px 0px;
+}
+.rowProducts{
+    border-top: 2px solid rgb(179, 170, 170);
+    display: flex;
+    align-items: center;
+}
+.imgCart{
+    height: 98px;
+    width: 78px;
+
+    padding: 5px 0px 8px 0px;
+
+    
+}
+.rowProducts p{
+    display: inline-block;
+    margin-left: 10px;
+}
+.ProductQty ul{
+    display: flex;
+    flex-direction: row;
+    /* align-items:flex-start; */
+    justify-content: start;
+    list-style: none;
+    padding: 0;
+
+}
+.ProductQty input button{
+    width: 40px;
+}
+
+
+.cartQty{
+    width: 40px;
+    height: 30px;
+    border: none;
+    /* background-color: transparent; */
+}
+
+
+.btnCart{
+    width: 180px;
+    height: 50px;
+    font-size: 15px;
+    font-weight: bolder;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    background-color: #9c9b6b;
+    margin-top: 30px;
+}
+
+.btnCart:hover{
+
+    background-color:#61614e ;
+}
+
+
+
+/* ADD TO CART CSS */
+
+
