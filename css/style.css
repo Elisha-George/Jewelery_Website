@@ -1,35 +1,54 @@
 @import url(http://db.onlinewebfonts.com/c/b903a10cbd02c30f0de8a49886eddcc0?family=CooperBTW01-Bold);
 @font-face {font-family: "CooperBTW01-Bold"; src: url("http://db.onlinewebfonts.com/t/b903a10cbd02c30f0de8a49886eddcc0.eot"); src: url("//db.onlinewebfonts.com/t/b903a10cbd02c30f0de8a49886eddcc0.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/b903a10cbd02c30f0de8a49886eddcc0.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/b903a10cbd02c30f0de8a49886eddcc0.woff") format("woff"), url("//db.onlinewebfonts.com/t/b903a10cbd02c30f0de8a49886eddcc0.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/b903a10cbd02c30f0de8a49886eddcc0.svg#CooperBTW01-Bold") format("svg"); }
 
+html{
+    font-size: 62.5%; 
+    /* now 1 rem = 10px */
+}
+@media (max-width:998px){
+
+    html{
+        font-size: 55%;
+    }
+
+}
+@media (max-width:768px){
+
+    html{
+        font-size: 45%;
+    }
+
+}
+
 html, body{
     overflow: visible;
     overflow-x: hidden;
 }
 /* HEADINGS */
 .h1Heading{
-    line-height: 22px;
+    line-height: 2.2rem;
     font-family: "CooperBTW01-Bold";
-    font-size: 50px;
-    line-height: 43px;
+    font-size: 5.0rem;
+    line-height: 4.3rem;
 }
 
 .h3subHeading{
 
     font-family: "CooperBTW01-Bold";
-    font-size: 25px;
+    font-size: 2.5rem;
     color: #adac77;
 }
 
 
 
 .logo{
-    margin-top: 20px;
+    margin-top: 2.0rem;
 
 }
 
 .navigation{
     text-align: center;  
-    padding-top: 30px;
+    padding-top: 3.0rem;
 }
 .navigation ul{
     padding: 0;
@@ -42,13 +61,13 @@ html, body{
    
     /* font-weight: bold; */
     color: black;
-    font-size:16px;  
-    padding: 0 20px ;
-    font-size: 18px;
+    font-size:1.6rem;  
+    padding: 0 2.0rem ;
+    font-size: 1.8rem;
     /* border-left: 2px solid black; */
 }
 #about,#contact,#shop{
-    border-left: 2px solid black;
+    border-left: .2rem solid black;
 
 
 }
@@ -60,15 +79,15 @@ html, body{
 }
 .icons{
     text-align: right;
-    padding-top: 30px;
+    padding-top: 3.0rem;
 }
 .icons ul li{
     display: inline-block;
 }
 .icons ul li{
-    margin-left: 20px;
-    width: 25px;
-    height: 25px;
+    margin-left: 2.0rem;
+    width: 2.5rem;
+    height: 2.5rem;
 }
 
 /* BANNER SECTION */
@@ -81,7 +100,7 @@ html, body{
     
     background-image: linear-gradient( rgba(65, 37, 37, 0.5), rgba(0, 0, 0, 0.5) ),url("../images/banner.png");
 margin-left: auto;
-    margin-top: 13px;
+    margin-top: 1.3rem;
     background-attachment: fixed;
  
 }
@@ -101,59 +120,59 @@ margin-left: auto;
   color: white;
   /* font-weight: bolder; */
   text-align: center;
-  padding-top: 35px; 
+  padding-top: 3.5rem; 
 }
 
 
 
 .mid h1{
-    text-shadow: 4px 3px #000000;
+    text-shadow: .4rem .3rem #000000;
 }
 .mid p{
-    line-height: 28px;
-    font-size: 15px;
-    margin-top: 30px;
+    line-height: 2.8rem;
+    font-size: 1.5rem;
+    margin-top: 3.0rem;
    
 }
 .mid button{
 
-    width: 130px;
-    height: 50px;
-    margin-top: 28px;
+    width: 13rem;
+    height: 5.0rem;
+    margin-top: 2.8rem;
     /* color: #adac77; */
     background-color:  #adac77;
     border: none;
     color: white;
     font-weight: bold;
 }
-@media screen and (max-width: 1000px){
+/* @media screen and (max-width: 1000px){
     .mid{
         height: 50%;
 
     }
     
-}
+} */
 
 /* MAIN SECTION */
 
 .main{
-    margin-top: 80px;
+    margin-top: 8.0rem;
     height: 100%;
 }
 .leftPara{
-    padding-left: 50px;
-    padding-right: 54px;
+    padding-left: 5.0rem;
+    padding-right: 5.4rem;
 }
 
 
 .leftPara p{
-    line-height: 30px;
+    line-height: 3.0rem;
     text-align:left;
 }
 .main button{
-    width: 130px;
-    height: 50px;
-    margin-top: 5px;
+    width: 13rem;
+    height: 5.0rem;
+    margin-top: .5rem;
     background-color:  #adac77;
     border: none;
     color: white;
@@ -165,9 +184,9 @@ margin-left: auto;
     background-repeat: no-repeat;
 }
 .rightPic img{
-    margin-left: 80px;
-    margin-top: 80px;
-    margin-left: 301px;
+    margin-left: 8.0rem;
+    margin-top: 8.0rem;
+    margin-left: 30.1rem;
 }
 
 
@@ -178,11 +197,11 @@ margin-left: auto;
 .products
 {
     background-color: rgb(243 243 243);
-    margin-top: 80px;
-    padding-top: 40px;
+    margin-top: 8.0rem;
+    padding-top: 4.0rem;
 }
 .productHead{
-    margin-top: 40px;
+    margin-top: 4.0rem;
 }
 
 
@@ -197,20 +216,14 @@ margin-left: auto;
 
 .products p{
     text-align: center;
-    line-height: 19px;
+    line-height: 1.9rem;
 
 }
 
 .productDisplay{
-    margin-top: 30px;
+    margin-top: 3.0rem;
 }
-/* .productDisplay h3{
-    text-align: center;
-    font-family: "CooperBTW01-Bold";
-    font-size: 21px;
-    color: #919064;
-    line-height: 5px;
-} */
+
 .btnView{
     position: relative;
     left: 44%;
@@ -221,9 +234,9 @@ margin-left: auto;
 }
 .products button{
 
-    width: 130px;
-    height: 50px;
-    margin-top: 5px;
+    width: 13rem;
+    height: 5.0rem;
+    margin-top: .5rem;
     background-color: transparent;
     border: 3px solid  #adac77;
     color:  #adac77;
@@ -236,10 +249,10 @@ margin-left: auto;
 .catagories{
     
     background-color: white;
-    margin-top: 43px;
+    margin-top: 4.3rem;
 }
 .catagorieDisplay{
-    margin-top: 30px;
+    margin-top: 3.0rem;
 
 }
 
@@ -247,27 +260,27 @@ margin-left: auto;
 .catagories h3{
     text-align: center;
     font-family: "CooperBTW01-Bold";
-    font-size: 23px;
+    font-size: 2.3rem;
     color: #9c9b6b;
-    line-height: 5px;
+    line-height: .5rem;
 }
 
 .catagories p{
     text-align: center;
-    line-height: 19px;
+    line-height: 1.9rem;
 }
 
 .newsletter {
 
-    margin-top: 40px;
+    margin-top: 4.0rem;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 4.0rem;
     
 }
 
 .newsletter h1{
     font-family:'Times New Roman', Times, serif;
-    font-size: 50px;
+    font-size: 5.0rem;
 }
 
 .newsletter div{
@@ -276,12 +289,12 @@ margin-left: auto;
 
 }
 .newsletter div {
-    height: 50px;
+    height: 5.0rem;
     border-radius: 0;
 
 }
 .newsletter div input{
-    height: 50px;
+    height: 5.0rem;
     background-color: rgb(243 243 243);
     border-radius: 0;
 }
@@ -296,15 +309,15 @@ margin-left: auto;
 .btnSub{
     color: white;
     background-color: #9c9b6b;
-    width: 30px;
+    width: 3.0rem;
     border-radius: 0;
-    width: 143px;
+    width: 14.3rem;
 }
 
 .line{
     border-top: 3px solid black;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 4.0rem;
+    margin-bottom: 4.0rem;
     
 }
 
@@ -330,7 +343,7 @@ align-items: center;
 
 .footNav{
     text-align: center;  
-    padding-top: 30px;
+    padding-top: 3.0rem;
 }
 .footNav ul{
     padding: 0;
@@ -343,9 +356,9 @@ align-items: center;
    
     /* font-weight: bold; */
     color: black;
-    font-size:8px;  
-    padding: 0 20px ;
-    font-size: 18px;
+    font-size:.8rem;  
+    padding: 0 2.0rem ;
+    font-size: 1.8rem;
     /* border-left: 2px solid black; */
 }
 
@@ -359,18 +372,18 @@ align-items: center;
 /* Social Media Icons */
 #SocialMediaIcons {
     display      : flex;
-    margin-bottom: 50px;
+    margin-bottom: 5.0rem;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 3.0px;
     
 }
 
 #SocialMediaIcons #twitter,
 #linkdin {
     color           : white;
-    border-radius   : 31px;
-    padding         : 15px;
-    font-size       : 18px;
+    border-radius   : 3.1rem;
+    padding         : 1.5rem;
+    font-size       : 1.8rem;
     display         : flex;
     justify-content : center;
     align-items     : center;
@@ -379,12 +392,12 @@ align-items: center;
 }
 
 #facebook {
-    width           : 47px;
-    margin          : 0px 25px;
+    width           : 4.7rem;
+    margin          : 0px 2.5rem;
     color           : white;
-    border-radius   : 31px;
-    padding         : 15px;
-    font-size       : 18px;
+    border-radius   : 3.1rem;
+    padding         : 1.5rem;
+    font-size       : 1.8rem;
     display         : flex;
     justify-content : center;
     align-items     : center;
