@@ -21,38 +21,40 @@
     <!-- header starts -->
     <header>
         <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="logo">
-                        <a href="index.html"><img src="images/logo.png" alt=""></a>
-                    </div>
-
-                </div>
-
-                <div class="col-md-6">
-                    <div class="navigation">
-
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="aboutus.html" id="about">About us</a></li>
-                            <li><a id="shop">Shop</a></li>
-                            <li><a href="contactUs.html" id="contact">ContactUs</a></li>
-                        </ul>
-
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="icons">
-                        <ul>
-                            <li><a href=""><img src="images/profile.png" alt=""></a></li>
-                            <li><a href=""><img src="images/Cart.png" alt=""></a></li>
-                        </ul>
-                    </div>
-                </div>
-
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                  <!-- Brand and toggle get grouped for better mobile display -->
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <!-- <a class="navbar-brand" href="#">Brand</a> -->
+                    <a href="index.html"><img src="images/logo.png" alt=""></a>
+        
+                  </div>
+              
+                  <div class="collapse navbar-collapse navbar-center" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                      <li class="active">
+                        <a href="index.html">Home</a></li>
+                      <li><a id="about" href="aboutus.html">| About Us</a></li>
+                      <li><a  id="contact" href="products.html">| Shop</a></li>
+                      <li><a  id="shop" href="ContactUs.html">| Contact</a></li>
+                    </ul>
+                   
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href=""><img src="images/profile.png" alt=""></a></li>
+                        <li><a href=""><img src="images/Cart.png" alt=""></a></li>
+                      </li>
+                    </ul>
+                  </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+              </nav>
             </div>
-        </div>
+        
 
     </header>
     <!-- header ends -->
@@ -68,7 +70,7 @@
         <div class="contaier">
             <div class="row">
                 <div class="col-md-12  cartMid">
-                    <h1 class="h1Heading">Add To Cart</h1>
+                    <h1 class="h1Heading">CheckOut</h1>
 
                 </div>
             </div>
@@ -201,11 +203,11 @@
     <section >
         <div class="container summary">
             <div class="row">
-                <div class="col-md-6">
-                    <h3>
+                <div class="col-md-6 col-sm-12">
+                    <h3 class="text-left">
                          Shopping Summary
                     </h3>
-                    <br>
+                    
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat id illum ullam quis amet exercitationem eveniet repudiandae maiores optio sunt, nostrum totam labore enim nesciunt expedita libero accusantium fugit rerum!</p>
 
                     <br>
@@ -213,27 +215,32 @@
                     <h4>
                         have a Cupon?
                     </h4>
+                    <div class="input-group cupon" >
+                        <input type="text" class="form-control" placeholder="Please enter Cupon" aria-describedby="basic-addon2">
+                       
+                        <span  class="input-group-addon btnSub " id="basic-addon2">Subscribe</span>
+                      </div> 
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-12 rightRecipt">
                     
-                    <div class="row rowSubTotal">
+                    <div class="row rowSubTotal recipt">
                         <div class="col-md-9">Subtotal</div>
                         <div class="col-md-3">$35.23</div>
                     </div>
 
-                    <div class="row rowTax">
+                    <div class="row rowTax recipt">
                         <div class="col-md-9">Tax</div>
                         <div class="col-md-3">$35.23</div>
                     </div>
                  
 
 
-                    <div class="row rowTotal">
+                    <div class="row rowTotal recipt">
                         <div class="col-md-9">Total</div>
                         <div class="col-md-3">$35.23</div>
                     </div>
 
-                    <div class="row">
+                    <div class="row rowFirstButton">
                     <button class="btnCheckOut">Check Out</button>
                     </div>
                     <div class="row">
@@ -255,7 +262,7 @@
             <div class="row">
               
                 <!-- Truck -->
-                <div class="col-md-3  ShippingBlocks" id="ship">
+                <div class="col-md-3   ShippingBlocks" id="ship">
                     <div class="col-md-4">
                 <i class="fa fa-truck" style="font-size: 33px;"></i>
 

@@ -20,38 +20,40 @@
     <!-- header starts -->
     <header>
         <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="logo">
-                        <a href="index.html"><img src="images/logo.png" alt=""></a>
-                    </div>
-                    
-                </div>
- 
-                <div class="col-md-6">
-                    <div class="navigation">
-
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="aboutus.html" id="about">About us</a></li>
-                            <li><a href="products.html" id="shop">Shop</a></li>
-                            <li><a href="contactUs.html" id="contact">ContactUs</a></li>
-                        </ul>
-
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="icons">
-                        <ul>
-                            <li><a href=""><img src="images/profile.png" alt=""></a></li>
-                            <li><a href=""><img src="images/Cart.png" alt=""></a></li>
-                        </ul>
-                    </div>
-                </div>
-
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                  <!-- Brand and toggle get grouped for better mobile display -->
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <!-- <a class="navbar-brand" href="#">Brand</a> -->
+                    <a href="index.html"><img src="images/logo.png" alt=""></a>
+        
+                  </div>
+              
+                  <div class="collapse navbar-collapse navbar-center" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                      <li class="active">
+                        <a href="index.html">Home</a></li>
+                      <li><a id="about" href="aboutus.html">| About Us</a></li>
+                      <li><a  id="contact" href="products.html">| Shop</a></li>
+                      <li><a  id="shop" href="ContactUs.html">| Contact</a></li>
+                    </ul>
+                   
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href=""><img src="images/profile.png" alt=""></a></li>
+                        <li><a href=""><img src="images/Cart.png" alt=""></a></li>
+                      </li>
+                    </ul>
+                  </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+              </nav>
             </div>
-        </div>
+        
 
     </header>
     <!-- HEADEER ENDS -->
@@ -63,7 +65,7 @@
         <div class="productbanner">
             <div class="contaier">
              <div class="row">
-                 <div class="col-md-12  contactMid">
+                 <div class="col-md-12  ProductMid">
                      <h1 class="h1Heading">Our Products</h1>
                 
                  </div>
@@ -101,20 +103,21 @@
                     <p class=" text-center">
                         Lorem ipsum dolor sit amet loremoris veniam 
                     </p>
-                                        
-                    <div class=" row">
-                        <div class="col-md-12">
-                            
-                            <div class="catagories tabs">
+                              
+                    
+                    <div class=" rowTabs row">
+                        <ul class=" tabs nav justify-content-center">
+                            <li class="nav-item">
+                              <a class="nav-link active" href="#">Necklece</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Rings</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Braceletes</a>
+                            </li>
 
-                                <button>Rings</button>
-                                <button>Earings</button>
-                                <button>necklace</button>
-
-
-                            </div>
-                        </div>
-    
+                          </ul>
                     </div>
     
                 </div>
@@ -122,22 +125,22 @@
                
 
                 <div class="row productDisplay">
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
                         <img src="images/1stProduct.png" alt="">
                         <h3>Product Heading!</h3>
                         <h3>Details!</h3>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3  col-sm-6 col-xs-12">
                         <img src="images/2ndproduct.png" alt="">
                         <h3>Product Heading!</h3>
                         <h3>Details!</h3>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3  col-sm-6 col-xs-12">
                         <img src="images/3rdProduct.png" alt="">
                         <h3>Product Heading!</h3>
                         <h3>Details!</h3>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3  col-sm-6 col-xs-12">
                         <img src="images/4thProduct.png" alt="">
                         <h3>Product Heading!</h3>
                         <h3>Details!</h3>
@@ -146,94 +149,71 @@
 
                 <!-- PRODUCTS ROW 2 -->
                 <div class="row productDisplay">
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
                         <img src="images/1stProduct.png" alt="">
                         <h3>Product Heading!</h3>
                         <h3>Details!</h3>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3  col-sm-6 col-xs-12">
                         <img src="images/2ndproduct.png" alt="">
                         <h3>Product Heading!</h3>
                         <h3>Details!</h3>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3  col-sm-6 col-xs-12">
                         <img src="images/3rdProduct.png" alt="">
                         <h3>Product Heading!</h3>
                         <h3>Details!</h3>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3  col-sm-6 col-xs-12">
                         <img src="images/4thProduct.png" alt="">
                         <h3>Product Heading!</h3>
                         <h3>Details!</h3>
                      </div>
                 </div>
 
-                  <!-- PRODUCTS ROW 3 -->
-                  <div class="row productDisplay">
-                    <div class="col-md-3">
-                        <img src="images/1stProduct.png" alt="">
-                        <h3>Product Heading!</h3>
-                        <h3>Details!</h3>
-                    </div>
-                    <div class="col-md-3">
-                        <img src="images/2ndproduct.png" alt="">
-                        <h3>Product Heading!</h3>
-                        <h3>Details!</h3>
-                    </div>
-                    <div class="col-md-3">
-                        <img src="images/3rdProduct.png" alt="">
-                        <h3>Product Heading!</h3>
-                        <h3>Details!</h3>
-                    </div>
-                    <div class="col-md-3">
-                        <img src="images/4thProduct.png" alt="">
-                        <h3>Product Heading!</h3>
-                        <h3>Details!</h3>
-                     </div>
-                </div>
+                
 
                   <!-- PRODUCTS ROW 4 -->
                   <div class="row productDisplay">
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
                         <img src="images/1stProduct.png" alt="">
                         <h3>Product Heading!</h3>
                         <h3>Details!</h3>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3  col-sm-6 col-xs-12">
                         <img src="images/2ndproduct.png" alt="">
                         <h3>Product Heading!</h3>
-                        <h3>Details!</h3>>
+                        <h3>Details!</h3>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3  col-sm-6 col-xs-12">
                         <img src="images/3rdProduct.png" alt="">
                         <h3>Product Heading!</h3>
                         <h3>Details!</h3>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3  col-sm-6 col-xs-12">
                         <img src="images/4thProduct.png" alt="">
                         <h3>Product Heading!</h3>
                         <h3>Details!</h3>
                      </div>
                 </div>
-
                   <!-- PRODUCTS ROW 5 -->
                   <div class="row productDisplay">
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
                         <img src="images/1stProduct.png" alt="">
                         <h3>Product Heading!</h3>
                         <h3>Details!</h3>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3  col-sm-6 col-xs-12">
                         <img src="images/2ndproduct.png" alt="">
                         <h3>Product Heading!</h3>
                         <h3>Details!</h3>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3  col-sm-6 col-xs-12">
                         <img src="images/3rdProduct.png" alt="">
                         <h3>Product Heading!</h3>
                         <h3>Details!</h3>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3  col-sm-6 col-xs-12">
                         <img src="images/4thProduct.png" alt="">
                         <h3>Product Heading!</h3>
                         <h3>Details!</h3>
