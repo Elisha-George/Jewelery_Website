@@ -1,3 +1,6 @@
+<?php
+include('connection.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -101,16 +104,17 @@
         
                   </div>
                     <div class="row">
-                    <form action="">
                         <div class="col-md-6">
+                        <form action="action.php" method="post">
+
                          <label for="inputName">Your Name</label>
-                         <input type="text" class="form-control" placeholder="First Name" id="inputName"
+                         <input name="name" type="text" class="form-control contact_input" placeholder="First Name" id="inputName"
                          aria-describedby="sizing-addon1">
                         </div>
 
                         <div class="col-md-6">
                          <label for="inputEmail">Your Email</label>
-                         <input type="text" class="form-control" placeholder="First Name"  id="inputEmail"
+                         <input name="email" type="text" class="form-control contact_input" placeholder="First Name"  id="inputEmail"
                          aria-describedby="sizing-addon1">
                         </div>
                     </div>
@@ -118,10 +122,11 @@
 
                     <div class="row">
                         <div class="col-md-12">
-                            <label for="txtMessage">Message</label>
+                            <label name="message" for="txtMessage">Message</label>
                             <textarea class="form-control MessageArea" id="txtMessage" rows="5" placeholder="Your Message Here"></textarea>
                             
-                            <button class="btnSubmit">Submit</button>
+                            <button name="submit" class="btnSubmit">Submit</button>
+                        </form>
                         </div>
                     </div>
 
