@@ -13,6 +13,7 @@ if(!$con)
 
 }
 else{
+    
     ?>
     <script>
         alert("connection Successfull !!");

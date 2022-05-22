@@ -9,7 +9,6 @@ if(isset($_POST['submit']))
     
 $sql="INSERT INTO contact_form(name,email,message) VALUES ('$name','$email','$message')";
 
-
     
 $result = mysqli_query($con,$sql);
 
@@ -22,7 +21,7 @@ if($result)
     </script>
 
     <?php
-    header("location:ContactUs.php");
+    header("location:..\ContactUs.php");
 }
 else{
     ?>

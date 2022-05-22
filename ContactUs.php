@@ -1,6 +1,4 @@
-<?php
-include('connection.php');
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -105,7 +103,7 @@ include('connection.php');
                   </div>
                     <div class="row">
                         <div class="col-md-6">
-                        <form action="action.php" method="post">
+                        <form action="backend/Contact_action.php" method="post">
 
                          <label for="inputName">Your Name</label>
                          <input name="name" type="text" class="form-control contact_input" placeholder="First Name" id="inputName"
@@ -122,8 +120,8 @@ include('connection.php');
 
                     <div class="row">
                         <div class="col-md-12">
-                            <label name="message" for="txtMessage">Message</label>
-                            <textarea class="form-control MessageArea" id="txtMessage" rows="5" placeholder="Your Message Here"></textarea>
+                            <label for="txtMessage">Message</label>
+                            <textarea name="message" class="form-control MessageArea" id="txtMessage" rows="5" placeholder="Your Message Here"></textarea>
                             
                             <button name="submit" class="btnSubmit">Submit</button>
                         </form>
