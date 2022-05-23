@@ -1,3 +1,8 @@
+<?php
+
+include('backend\connection.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -122,104 +127,48 @@
     
                 </div>
     
+
                
 
                 <div class="row productDisplay">
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <img src="images/1stProduct.png" alt="">
-                        <h3>Product Heading!</h3>
-                        <h3>Details!</h3>
-                    </div>
-                    <div class="col-md-3  col-sm-6 col-xs-12">
-                        <img src="images/2ndproduct.png" alt="">
-                        <h3>Product Heading!</h3>
-                        <h3>Details!</h3>
-                    </div>
-                    <div class="col-md-3  col-sm-6 col-xs-12">
-                        <img src="images/3rdProduct.png" alt="">
-                        <h3>Product Heading!</h3>
-                        <h3>Details!</h3>
-                    </div>
-                    <div class="col-md-3  col-sm-6 col-xs-12">
-                        <img src="images/4thProduct.png" alt="">
-                        <h3>Product Heading!</h3>
-                        <h3>Details!</h3>
-                     </div>
-                </div>
 
-                <!-- PRODUCTS ROW 2 -->
-                <div class="row productDisplay">
+                <!-- image Display using Php -->
+
+                <?php
+               
+                $sql="SELECT * FROM tbl_products";   //Limit 4
+                $result= mysqli_query($con,$sql);
+                
+
+                
+                
+                while($row = mysqli_fetch_array($result)){?>
+                  
+                 <!-- <?php   echo"<img src='uploaded_Image/".$row['image_path']."'>";?> -->
+                         
+                           
+
                     <div class="col-md-3 col-sm-6 col-xs-12">
-                        <img src="images/1stProduct.png" alt="">
-                        <h3>Product Heading!</h3>
-                        <h3>Details!</h3>
+                    <?php   echo"<img src='uploaded_Image/".$row['image_path']."'>";?>
+                        <h3>Product Heading!</h3> 
+                        <h3>Details!</h3>           
+                     
+                        <!--producr name detail will also be fetched from data base -->
+
+                        
                     </div>
-                    <div class="col-md-3  col-sm-6 col-xs-12">
-                        <img src="images/2ndproduct.png" alt="">
-                        <h3>Product Heading!</h3>
-                        <h3>Details!</h3>
-                    </div>
-                    <div class="col-md-3  col-sm-6 col-xs-12">
-                        <img src="images/3rdProduct.png" alt="">
-                        <h3>Product Heading!</h3>
-                        <h3>Details!</h3>
-                    </div>
-                    <div class="col-md-3  col-sm-6 col-xs-12">
-                        <img src="images/4thProduct.png" alt="">
-                        <h3>Product Heading!</h3>
-                        <h3>Details!</h3>
-                     </div>
+                    <?php }?>
+
+                    <!-- this PHP code will be applied on only one colum because as the product or images increases it will keep adding the colum by it self an in the same manner rows wil be added  -->
+                   
                 </div>
 
                 
+             
 
-                  <!-- PRODUCTS ROW 4 -->
-                  <div class="row productDisplay">
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <img src="images/1stProduct.png" alt="">
-                        <h3>Product Heading!</h3>
-                        <h3>Details!</h3>
-                    </div>
-                    <div class="col-md-3  col-sm-6 col-xs-12">
-                        <img src="images/2ndproduct.png" alt="">
-                        <h3>Product Heading!</h3>
-                        <h3>Details!</h3>
-                    </div>
-                    <div class="col-md-3  col-sm-6 col-xs-12">
-                        <img src="images/3rdProduct.png" alt="">
-                        <h3>Product Heading!</h3>
-                        <h3>Details!</h3>
-                    </div>
-                    <div class="col-md-3  col-sm-6 col-xs-12">
-                        <img src="images/4thProduct.png" alt="">
-                        <h3>Product Heading!</h3>
-                        <h3>Details!</h3>
-                     </div>
-                </div>
-                  <!-- PRODUCTS ROW 5 -->
-                  <div class="row productDisplay">
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <img src="images/1stProduct.png" alt="">
-                        <h3>Product Heading!</h3>
-                        <h3>Details!</h3>
-                    </div>
-                    <div class="col-md-3  col-sm-6 col-xs-12">
-                        <img src="images/2ndproduct.png" alt="">
-                        <h3>Product Heading!</h3>
-                        <h3>Details!</h3>
-                    </div>
-                    <div class="col-md-3  col-sm-6 col-xs-12">
-                        <img src="images/3rdProduct.png" alt="">
-                        <h3>Product Heading!</h3>
-                        <h3>Details!</h3>
-                    </div>
-                    <div class="col-md-3  col-sm-6 col-xs-12">
-                        <img src="images/4thProduct.png" alt="">
-                        <h3>Product Heading!</h3>
-                        <h3>Details!</h3>
-                     </div>
-                </div>
-
+                <!-- End of PHP CODE -->
+             
+                
                 <div class="col-md-12">
                     
 <div class="pagination">

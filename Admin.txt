@@ -1,0 +1,6 @@
+                        ADMIN PAANEL
+products
+cms  // for written content e.g about us
+user details
+Dashbaord
+banners

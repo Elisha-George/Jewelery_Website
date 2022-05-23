@@ -58,14 +58,14 @@ include ("backend/connection.php");
   <input type="text" class="form-control" name="quantity" id="basic-url" aria-describedby="basic-addon3">
 </div>
 
-<label for="basic-url">status</label>
+<label for="basic-url">status</label>  //select box, Active and inactive
 <div class="input-group">
   <input type="text" class="form-control" name="status" id="basic-url" aria-describedby="basic-addon3">
 </div>
 
 
 <br>
-<button type="submit" name='upload'>Upload Image</button>
+<button type="submit" name='upload'>Save Product</button>
 
 </form>
 

@@ -6,19 +6,22 @@ $database="web_project";
 
 $con=mysqli_connect($servername,$username,$password,$database);
 
-if(!$con)
-{
 
-    die('error!!');
+// the Following code is just to make sure that the connection is working or not
 
-}
-else{
+// if(!$con)
+// {
+
+//     die('error!!');
+
+// }
+// else{
     
-    ?>
-    <script>
-        alert("connection Successfull !!");
-    </script>
-    <?php
-}
+//     ?>
+<!--   <script> -->
+<!--          alert("connection Successfull !!"); -->
+<!--      </script> -->
+     <?php
+// }
 
 ?>
