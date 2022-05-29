@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Add To Cart</title>
+    <title>LogIn</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -68,11 +68,11 @@
     <!-- BANNER STARTS -->
 
 
-    <div class="cartBanner">
+    <div class="LoginBanner">
         <div class="contaier">
             <div class="row">
-                <div class="col-md-12  cartMid">
-                    <h1 class="h1Heading">Login/ Sign up</h1>
+                <div class="col-md-12  loginMid">
+                    <h1 class="h1Heading">Login / Sign In</h1>
 
                 </div>
             </div>
@@ -86,62 +86,57 @@
 
     <!-- LOGIN OR SIGNUP STARTS  -->
 
-    <section class="sec_log">
-        <div class="container log_Sign">
-            <div class="row">
-                <div class="col-md-4 col-md-offset-2 leftLogin">
-                    <h4 class="log_h1">
-                        PLEASE LOG IN
-                    </h4>      
-                    <div class="formLogin input-group">
-                        <input type="text" class=" form-control" placeholder="Email Address" aria-describedby="basic-addon1">
-                      </div>
-                      <div class="formLogin input-group">
-                        <input type="text" class=" form-control" placeholder="Password" aria-describedby="basic-addon1">
-                      </div>
+    <section class="login_form">
+        <div class="container">
+            <div class="row no-gutter">
+                <div class="col-md-5">
+                    <img class="LoginImage" src="images/loginImage-4.jpg" alt="">
 
-                      <div class="btn-group" role="group">
-                        <button type="button" class="btn btnLogin btn-default">Login</button>
-                      </div>
-                      <br>
-
-                      <a class="forget" href="">Forgetten Your Password?</a>
-                                
                 </div>
-                <div class="col-md-4 right">
-                    <h4 class="log_h1">
-                        PLEASE SIGN UP                   
-                    </h3> 
-                    <div class="formSignup input-group">
-                        <input type="text" class="form-control" placeholder="Email Address" aria-describedby="basic-addon1">
-                      </div>
-                      <div class="formSignup input-group">
-                        <input type="text" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
-                      </div>
+                <div class="col-md-6 colum_form">
 
-                      <div class="formSignup input-group">
-                        <input type="text" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
-                      </div>
+                    <form action="" method="password">
 
-                      <div class="formSignup input-group">
-                        <input type="text" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
-                      </div>
+                        <div class="col-md-7 login_headCol">
+                            <h1 class="loginLogo">LOGO</h1>
+                            <h3 class="loginHead">Sign In To Your Account</h3>
+                        </div>
 
-                      <div class="formSignup input-group">
-                        <input type="text" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
-                      </div>
+                        <div class="form-row  no-gutter">
+                            <div class="col-md-7 col_email">
+                                
+                             <label for="loginEmail" class="loginLables">Email</label>   
+                            <input class="loginInput" type="email" name="email" id="loginEmail" class="form-control" placeholder="John@gmail.com">
+                            </div>
+                        </div>
 
-                      <div class="formSignup input-group">
-                        <input type="text" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
-                      </div>
+                        <div class="form-row   no-gutter">
+                            <div class="col-md-7 col_password">
+                             <label for="loginpassword"  class="loginLables">Password</label>   
+                            <input  class="loginInput" type="password" id="loginpassword" name="email" class="form-control" placeholder="**************">
+                            </div>
+                        </div>
+
+                        <div class="form-row no-gutter">
+                            <div class="col-md-7">
+                                <button type="button" class="btnlogin"> LogIn</button>
+                            </div>
+                        </div>
+
+                
+                        <div class="form-row no-gutter forget_row">
+                            <div class="col-md-7 col_forget">
+                            <a href="" class="forget">Forget Password?</a>
+                            <p class="forget">Don't have an account? <a href="">Register here</a></p>
+                        </div>
+                        </div>
+
+                      
+
+                    </form>
 
 
 
-
-                      <div class="btn-group" role="group">
-                        <button type="button" class="btnSigup btn btn-default">Create an account</button>
-                      </div>
-                      <br>    
                 </div>
             </div>
         </div>

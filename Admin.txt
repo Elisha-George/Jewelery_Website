@@ -3,4 +3,5 @@ products
 cms  // for written content e.g about us
 user details
 Dashbaord
+signin singout history with name Email and account type
 banners

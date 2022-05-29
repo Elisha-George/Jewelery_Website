@@ -135,20 +135,15 @@ include('backend\connection.php');
                 <!-- image Display using Php -->
 
                 <?php
-               
                 $sql="SELECT * FROM tbl_products";   //Limit 4
                 $result= mysqli_query($con,$sql);
-                
-
-                
-                
                 while($row = mysqli_fetch_array($result)){?>
-                  
-                 <!-- <?php   echo"<img src='uploaded_Image/".$row['image_path']."'>";?> -->
-                         
-                           
+                
+                 <!-- SET DEDEFAULT HEIGHT AN DWIDTH TO DISPLAY ALL TYPES OF IMAGE IN ONE FORMATE -->
 
-                    <div class="col-md-3 col-sm-6 col-xs-12">
+
+
+                    <div class="col_Products col-md-3 col-sm-6 col-xs-12">
                     <?php   echo"<img src='uploaded_Image/".$row['image_path']."'>";?>
                         <h3>Product Heading!</h3> 
                         <h3>Details!</h3>           
