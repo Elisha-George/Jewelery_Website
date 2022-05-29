@@ -89,7 +89,7 @@
     <section class="login_form">
         <div class="container">
             <div class="row no-gutter">
-                <div class="col-md-5">
+                <div class="col-md-5 col_loginImage">
                     <img class="LoginImage" src="images/loginImage-4.jpg" alt="">
 
                 </div>

@@ -1,3 +1,9 @@
+<?php
+include('backend/signupAction.php');
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -92,7 +98,7 @@
             
                 <div class="col-md-5 signup_colum_form">
 
-                    <form action="">
+                    <form action="backend/signupAction.php" method="post">
 
                         <div class="col-md-7 signup_headCol">
                             <h1 class="signupLogo">LOGO</h1>
@@ -112,6 +118,11 @@
                         <div class="form-row  no-gutter">
                             <div class="col-md-7 col_inputDiv">  
                             <input class="SignupInput" type="email" name="email" id="loginEmail" class="form-control" placeholder="John@gmail.com">
+                            </div>
+                        </div>
+                        <div class="form-row  no-gutter">
+                            <div class="col-md-7 col_inputDiv">  
+                            <input class="SignupInput" type="email" name="phonenumber" id="loginEmail" class="form-control" placeholder="03**-*******">
                             </div>
                         </div>
                         <div class="form-row   no-gutter">

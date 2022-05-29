@@ -1154,6 +1154,9 @@ margin-left: auto;
     padding-top: 5rem;
     
 }
+.col_loginImage {
+    margin-left: 8rem;
+}
 .login_form{
     margin-top: 8rem;
     margin-bottom: 5rem;
@@ -1259,7 +1262,7 @@ margin-left: auto;
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
-  padding-top: 35px; 
+  padding-top: 21px; 
   border-radius: 15px;
 
 } 
