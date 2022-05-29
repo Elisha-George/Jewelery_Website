@@ -1230,3 +1230,110 @@ margin-left: auto;
 .forget{
     font-size: 1.9rem;
 }
+
+
+
+/* SOIGN UP OR REGISTRATION PAGE CSS */
+
+
+.signupBanner{
+    height: 40vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    background-attachment: fixed;
+    
+   /* background-image: url("../images/contactUsBanner.webp"); */
+    background-image: linear-gradient( rgba(34, 21, 21, 0.582), rgba(77, 34, 34, 0.5) ),url("../images/signupBanner.jpg");
+margin-left: auto;
+    margin-top: 13px;
+} 
+ .signupMid{
+    height: 20%;
+    width: 25%;
+    border: 6px solid white;
+    /* margin-top: 10rem; */
+    position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding-top: 35px; 
+  border-radius: 15px;
+
+} 
+
+.signup_colum_form{
+    padding-top: 0rem;
+    
+}
+.signup_form{
+    margin-top: 8rem;
+    margin-bottom: 5rem;
+}
+
+.signup_headCol h1,h3{
+    font-family: "CooperBTW01-Bold";
+    color: #6a6844;    
+}
+
+.no-gutter {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  
+  .no-gutter > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .signupLogo, .signupHead{
+      font-weight: bold;
+  }
+  .signupImage{
+      border-top-left-radius: 11px;
+      border-bottom-left-radius: 11pxpx;
+      border-top-right-radius: 40px;
+      border-bottom-right-radius: 40px;
+
+    
+
+      opacity: 89%;
+      width: 99%;
+
+      box-shadow: 27px 16px 19px 0px gray;
+     
+  }
+ 
+
+  .SignupInput{
+      height: 5rem;
+      width: 40rem;
+      font-size: 1.8rem;
+      border-radius: 20px;
+      padding-left: 15px;
+      border: 2px solid #8a8964;
+  }
+  .col_inputDiv{
+      margin-top: 2.5rem;
+
+  }
+ 
+.btnSignup{
+    height: 5rem;
+    width: 40rem;
+    font-size: 1.8rem;
+    border-radius: 20px;
+    border: none;
+    margin-top: 2rem;
+    background-color: #9c9b6b;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 2rem;
+} 
+
+
+
+.forget{
+    font-size: 1.9rem;
+}
