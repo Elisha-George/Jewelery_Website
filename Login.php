@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>LogIn</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
@@ -119,16 +119,12 @@
 
                         <div class="form-row no-gutter">
                             <div class="col-md-7">
-                                <button type="button" class="btnlogin"> LogIn</button>
+                                <button type="submit" class="btnlogin"> LogIn</button>
                             </div>
                         </div>
 
                 
-                        <div class="form-row no-gutter forget_row">
-                            <div class="col-md-7 col_forget">
-                            <a href="" class="forget">Forget Password?</a>
-                            <p class="forget">Don't have an account? <a href="">Register here</a></p>
-                        </div>
+                       
                         </div>
 
                       

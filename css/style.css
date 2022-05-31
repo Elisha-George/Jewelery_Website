@@ -238,6 +238,10 @@ margin-left: auto;
     margin-top: 3.0rem;
     text-align: center;
 }   
+ 
+.col_Products img{
+    width: 100%;
+}
 
 .btnView{
     position: relative;
