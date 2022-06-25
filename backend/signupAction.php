@@ -1,50 +1,43 @@
 <?php
-$Show_ErrorAlert=""; //this is to avoide the 
-if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
+include ("connection.php");
 
-    include('connection.php');
-
-    session_start();
-
-    $Show_ErrorAlert=false;
-
-    if (isset($_POST['btnSignup'])) {
-
-
-        $firstname        = $_POST['firstName'];
-        $lastname         = $_POST['LastName'];
-        $email            = $_POST['email'];
-        $password         = $_POST['password'];
-        $confirmPassword  = $_POST['confirm_password'];
-
-
-        // resolve the issue of  $exist variable because it is giving error!!
-
-        $exists == false;
-
-        if ($password == $confirmPassword && $exists==false) {
-
-            $sql = "INSERT INTO tbl_login(first_name, last_name, email, password) VALUES ('$firstname','$lastname','$email','$password')";
-
-            $result = mysqli_query($con, $sql);
-
-             
-        if ($result) {
-
-            $Show_ErrorAlert==false;
-        }
-
-        }
-
+if (isset($_POST['btnSignup'])) {
     
+    $FirstName = $_POST['firstName'];
+    $LastName = $_POST['LastName'];
+    $Email = $_POST['email'];
+    $phoneNumber=$_POST['phonenumber'];
+    $Password = $_POST['password'];
+    $confirmPassword=$_POST['confirm_password'];
+   
+
+$select= "select * from signup where email = '$Email'  && password = '$Password' ";
+//echo($select);
+
+$result = mysqli_query($con, $select);
 
 
 
-       
-        // if ($result) {
+if (mysqli_num_rows($result) > 0){
+    $error[]= 'The user is already exist';
+    
+}   
+// and if password is equls to confirm pasword
+else {
 
-        //     header("location:..\loginDemo.php");
-        // }
+    $insert ="INSERT INTO signup(firstName, lastName, email, password) 
+    VALUES ('$FirstName','$LastName','$Email','$Password')";
+    mysqli_query ($con, $insert);
+
+    if(mysqli_query($con,$insert))
+    {
+        echo "inserted";
+    }
+    else{
+        echo "not inserted";
     }
 }
+
+}
+?>

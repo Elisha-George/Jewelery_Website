@@ -92,7 +92,7 @@ include('backend/signupAction.php');
 
     <!-- SIGNUP STARTS  -->
 
-<?php
+<!-- <?php
 print $Show_ErrorAlert;
 if($Show_ErrorAlert==true)
 {
@@ -101,7 +101,7 @@ echo '<div class="alert alert-warning alert-dismissible" role="alert">
  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
  <strong>Warning! </strong> Ivalid Credentials, can not signin !!! </div>';
 }
-?>
+?> -->
 
    
 
@@ -112,12 +112,18 @@ echo '<div class="alert alert-warning alert-dismissible" role="alert">
         <div class="container">
             <div class="row no-gutter">
 
+                <div class="col-md-5">
+                    <img class="signupImage" src="images/loginImage-4.jpg" alt="">
+
+                </div>
+
                 <div class="col-md-5 signup_colum_form">
 
                     <form action="backend\signupAction.php" method="post">
 
                         <div class="col-md-7 signup_headCol">
-                            <h1 class="signupLogo">LOGO</h1>
+                            <img class="LoginLogo" src="images/loginLogo.png.crdownload" alt="">
+
                             <h3 class="signupHead">Register Yourselef </h3>
                         </div>
 
@@ -180,10 +186,7 @@ echo '<div class="alert alert-warning alert-dismissible" role="alert">
 
                 </div>
 
-                <div class="col-md-5">
-                    <img class="signupImage" src="images/loginImage-4.jpg" alt="">
-
-                </div>
+                
             </div>
         </div>
     </section>

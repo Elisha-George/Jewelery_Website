@@ -26,7 +26,6 @@ if(isset($_POST['upload']))
         // print_r($_FILES['file']);
         // echo "<pre>";
 
-
         $upload_dir = '../uploaded_Image/';
         $name = str_replace(' ','-', $_FILES['file']['name']);
         move_uploaded_file($_FILES['file']['tmp_name'], $upload_dir.$name);
