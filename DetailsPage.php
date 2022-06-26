@@ -4,6 +4,7 @@ session_start();
 if(!isset($_SESSION['email'])){
     header('location:login.php');
 }
+include('backend/detailsAction.php');
 ?>
 
 <!DOCTYPE html>
@@ -47,17 +48,17 @@ if(!isset($_SESSION['email'])){
                   <div class="collapse navbar-collapse navbar-center" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                       <li class="active">
-                        <a href="index.html">Home</a></li>
-                      <li><a id="about" href="aboutus.html">| About Us</a></li>
-                      <li><a  id="contact" href="products.html">| Shop</a></li>
-                      <li><a  id="shop" href="ContactUs.html">| Contact</a></li>
+                        <a href="index.php">Home</a></li>
+                      <li><a id="about" href="aboutus.php">| About Us</a></li>
+                      <li><a  id="contact" href="products.php">| Shop</a></li>
+                      <li><a  id="shop" href="ContactUs.php">| Contact</a></li>
                     </ul>
                    
                     <ul class="nav navbar-nav navbar-right">
                         <!-- <li><a href="">Log-out</a></li> -->
 
                         
-                        <li><a> <img src="images/profile.png" alt=""></a></li>
+                      <!-- <li><a> <img src="images/profile.png" alt=""></a></li> -->
                         <li><a href=""><img src="images/Cart.png" alt=""></a></li>
                         <li><a href="backend/logoutAction.php"><img src="images/logout.png" height="20rem" width="25rem" alt=""></a></li>
 
@@ -92,22 +93,45 @@ if(!isset($_SESSION['email'])){
     <!-- PRODUCT DISCRIPTION STARTS -->
 
     <!-- MAIN STARTS -->
+    <?php
+
+                $sql="SELECT * FROM `tbl_products` WHERE `id` = $product_id";   //Limit 4
+                $result= mysqli_query($con,$sql);
+                while($row = mysqli_fetch_array($result)){
+                   
+
+                    // This whole php code can also be put in the function as well and then we will only call the funcion more effective way!! 
+                    $p_ID=$row['id'];
+                    $p_name=$row['name'];
+                    $desc=$row['description'];
+                    $quantity=$row['quantity'];
+                    $price=$row['price'];
+                    $imagePath=$row['image_path'];
+                    ?>
     <section class="main landingProducts">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 leftProduct">
 
                     <!-- flex would be a better option for css remember!! -->
+                    
+
 
                     <div class="divProduct">
-                        <img src="images/cat1st.png" alt="">
-                        <img src="images/cat2nd.png" alt="">
+                        <?php echo" <img src='uploaded_Image/".$row['image_path']."'>"?>
+                        <?php echo" <img src='uploaded_Image/".$row['image_path']."'>"?>
+
                     </div>
                 </div>
            
             <div class="col-md-6 rightProductInfo">
 
-                <h1 class="h1Heading">Designer Ring</h1>
+            
+          
+
+              <?php echo "<h1 class='h1Heading'>  $p_name </h1>"?>  
+              <?php echo "<h2 class='h2subHeading'> $ $price </h2>"?>  
+
                 <br>
                 <span class="fa fa-star fa-lg checked"></span>
                     <span class="fa fa-star fa-lg checked"></span>
@@ -117,13 +141,15 @@ if(!isset($_SESSION['email'])){
 
                     <br>
                     <br>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis in magni fuga ab architecto iste voluptatem fugit velit consequatur ex quo, qui, nam nostrum eveniet repellat tempore accusantium sed quod! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut dicta impedit repellendus veritatis quaerat tenetur ipsam. Voluptates molestiae fuga nihil rem ipsum inventore reiciendis, quam maxime natus fugiat nisi asperiores!</p>
+
+                    <!-- description -->
+
+                <h3 class="h3subHeading"> Description</h3>
+               <?php   echo "<p> $desc</p>" ?>
 
                     <!-- Product Add -->
                     <div class="quantity">
-                        <h3 class="h3subHeading">
-                            Quantity
-                        </h3>
+                    <?php echo  " <h3 class='h3subHeading'>Quantity:  $quantity  </h3>" ?> 
                         
                         <!-- <button>-</button>
                         
@@ -132,17 +158,22 @@ if(!isset($_SESSION['email'])){
                         <button>+</button> -->
 
                     </div>
+                    <?php
+                    }?>
                 
 
                    
                     <i class="fa fa-truck" style="font-size: 25px;"></i>
-                    <p class="shipping">Lorem dolor , amet consectetur adipisicing adipisicing amet ametamet .</p><br>
+                    <p class="shipping">Free Shipping within the country</p><br>
                     <i class="fa fa-tag" style="font-size: 25px;"></i>
-                    <p class="tag">Lorem ipsum dolor sit,  consectetur adipisicing adipisicing amet ametamet</p>
+                    <p class="tag">Authentic product and can be returned within 3 days</p>
         
                     <br>
+            
+                    <!-- SENDIND ALL THE DATA TO CART IN THE -->
 
-                <button type="button" class="btn btn-primary btn-lg btnShop">Shop</button>
+                 <?php echo "<a href='cart.php?product_id=$p_ID '>  <button type='button class=btn btn-primary btn-lg btnShop'>Add to cart</button> </a>"?>
+
 
         
                 </div>
@@ -155,11 +186,25 @@ if(!isset($_SESSION['email'])){
     <!-- BUTTONS -->
     <section class="secButtons">
     
-                
-                <button type="button" class="btn btn-primary btn-lg btnDiscription">Discriptions</button>
-                <button type="button" class="btn btn-primary btn-lg btnReview">Reviews</button>
+    
+    <div class="col-md-2 col-sm-4"> 
+         <button type="button" class=" btn btn-primary btn-lg btnDiscription">Discriptions</button>
+        </div>
 
-                <button type="button" class="btn btn-primary btn-lg btnInfo">additional info</button>
+        <div class="col-md-2 col-sm-4"> 
+        <button type="button" class="btn btn-primary btn-lg btnReview">Reviews</button>
+        
+        </div>
+
+        <div class="col-md-2 col-sm-4"> 
+        
+        <button type="button" class="btn btn-primary btn-lg btnInfo">additional info</button>
+
+        </div>
+
+
+
+              
 
         
 

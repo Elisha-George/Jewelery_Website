@@ -47,17 +47,17 @@ if(!isset($_SESSION['email'])){
                   <div class="collapse navbar-collapse navbar-center" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                       <li class="active">
-                        <a href="index.html">Home</a></li>
-                      <li><a id="about" href="aboutus.html">| About Us</a></li>
-                      <li><a  id="contact" href="products.html">| Shop</a></li>
-                      <li><a  id="shop" href="ContactUs.html">| Contact</a></li>
+                        <a href="index.php">Home</a></li>
+                      <li><a id="about" href="aboutus.php">| About Us</a></li>
+                      <li><a  id="contact" href="products.php">| Shop</a></li>
+                      <li><a  id="shop" href="ContactUs.php">| Contact</a></li>
                     </ul>
                    
                     <ul class="nav navbar-nav navbar-right">
                         <!-- <li><a href="">Log-out</a></li> -->
 
                         
-                        <li><a> <img src="images/profile.png" alt=""></a></li>
+                      
                         <li><a href=""><img src="images/Cart.png" alt=""></a></li>
                         <li><a href="backend/logoutAction.php"><img src="images/logout.png" height="20rem" width="25rem" alt=""></a></li>
 

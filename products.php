@@ -43,15 +43,17 @@ include('backend\connection.php');
                   <div class="collapse navbar-collapse navbar-center" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                       <li class="active">
-                        <a href="index.html">Home</a></li>
-                      <li><a id="about" href="aboutus.html">| About Us</a></li>
-                      <li><a  id="contact" href="products.html">| Shop</a></li>
-                      <li><a  id="shop" href="ContactUs.html">| Contact</a></li>
+                        <a href="index.php">Home</a></li>
+                      <li><a id="about" href="aboutus.php">| About Us</a></li>
+                      <li><a  id="contact" href="products.php">| Shop</a></li>
+                      <li><a  id="shop" href="ContactUs.php">| Contact</a></li>
                     </ul>
                    
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href=""><img src="images/profile.png" alt=""></a></li>
+                       
                         <li><a href=""><img src="images/Cart.png" alt=""></a></li>
+                        <li><a href="backend/logoutAction.php"><img src="images/logout.png" height="20rem" width="25rem" alt=""></a></li>
+
                       </li>
                     </ul>
                   </div><!-- /.navbar-collapse -->
@@ -154,7 +156,8 @@ include('backend\connection.php');
                     <?php   echo"<img src='uploaded_Image/".$row['image_path']."'>";?>
                     <?php  echo "   <h3>".$row['name']." </h3>" ?>
                     <?php  echo "   <h3>".$row['price']." </h3>" ?>  
-                  <a href="DetailsPage.php">  <button type="submit" name="btnDetails " class="btndetails btnReview">Details</button> </a>
+               <?php echo "<a href='DetailsPage.php?pid=$p_id'>  <button type='submit' name='btnDetails 'class='btndetails btnReview'>Details</button> </a>"?>
+               
                      
                         <!--producr name detail will also be fetched from data base -->
 

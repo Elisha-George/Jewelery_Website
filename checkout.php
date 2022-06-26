@@ -47,17 +47,17 @@ if(!isset($_SESSION['email'])){
                   <div class="collapse navbar-collapse navbar-center" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                       <li class="active">
-                        <a href="index.html">Home</a></li>
-                      <li><a id="about" href="aboutus.html">| About Us</a></li>
-                      <li><a  id="contact" href="products.html">| Shop</a></li>
-                      <li><a  id="shop" href="ContactUs.html">| Contact</a></li>
+                        <a href="index.php">Home</a></li>
+                      <li><a id="about" href="aboutus.php">| About Us</a></li>
+                      <li><a  id="contact" href="products.php">| Shop</a></li>
+                      <li><a  id="shop" href="ContactUs.php">| Contact</a></li>
                     </ul>
                    
                     <ul class="nav navbar-nav navbar-right">
                         <!-- <li><a href="">Log-out</a></li> -->
 
                         
-                        <li><a> <img src="images/profile.png" alt=""></a></li>
+                       
                         <li><a href=""><img src="images/Cart.png" alt=""></a></li>
                         <li><a href="backend/logoutAction.php"><img src="images/logout.png" height="20rem" width="25rem" alt=""></a></li>
 
@@ -96,116 +96,56 @@ if(!isset($_SESSION['email'])){
 
     <!-- CART SECTION STARTS-->
 
-    <section class="Cart">
-        <div class="container">
-            <!-- Cart headings -->
-            <div class="row rowHead">
-                <div class="col-md-6">
-                    <h4><b>Products</b></h4>
-                </div>
-                <div class="col-md-2">
-                    <h4><b>Price</b></h4>
-                </div>
-                <div class="col-md-2">
-                    <h4><b>Quantity</b></h4>
-                </div>
-                <div class="col-md-2">
-                    <h4><b>total</b></h4>
-                </div>
-            </div>
+    <br>
+<br>
 
-            <!-- product add and remove -->
-            <div class="row rowProducts">
-                <div class="col-md-6">
-                    <img src="images/1stProduct.png" alt="" class="imgCart">
-                    <p><b>Lorem ipsum dolor sit amet</b> </p>
-                </div>
-                <div class="col-md-2">
-                    <h4>$130.00</h4>
-                </div>
-                <div class="col-md-2">
-                    <div class="ProductQty">
-                        <ul>
-                            <li><button class="cartQty">-</button></li>
-                            <li>
-                                <input type="text" class=" cartQty form-control" value="1" min="{5" } max=""
-                                    step="" required="required" title="">
-                            </li>
-                            <li><button class="cartQty">+</button></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-1">
-                    <h4>$130.00</h4>
-                </div>
-                <div class="col-md-1">
-                    <h4><b>X</b></h4>
-                </div>
-            </div>
+    <!-- CART SECTION STARTS-->
+    
+    <div class="container">
+    <div class="table-responsive">
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col"><h4><b>Products</b></h4></th>
+      <th scope="col"><h4><b>Price</b></h4></th>
+      <th scope="col"><h4><b>Quantity</b></h4></th>
+      <th scope="col"><h4><b>total</b></h4></th>
+      <th scope="col"><h4><b>Remove</b></h4></th>
 
-               <!-- product add and remove -->
-               <div class="row rowProducts">
-                <div class="col-md-6">
-                    <img src="images/3rdProduct.png" alt="" class="imgCart">
-                    <p><b>Lorem ipsum dolor sit amet</b> </p>
-                </div>
-                <div class="col-md-2">
-                    <h4>$130.00</h4>
-                </div>
-                <div class="col-md-2">
-                    <div class="ProductQty">
-                        <ul>
-                            <li><button class="cartQty">-</button></li>
-                            <li>
-                                <input type="text" class=" cartQty form-control" value="1" min="{5" } max=""
-                                    step="" required="required" title="">
-                            </li>
-                            <li><button class="cartQty">+</button></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-1">
-                    <h4>$130.00</h4>
-                </div>
-                <div class="col-md-1">
-                    <h4><b>X</b></h4>
-                </div>
-            </div>
+
+    </tr>
+  </thead>
+  <tbody>
+    
+  <?php
+  include('backend/cartAction.php');
+     $sql="SELECT * FROM `tbl_products`";   //Limit 4
+     $result= mysqli_query($con,$sql);
+     while($row = mysqli_fetch_array($result))
+     {
+     echo" 
+     
+     
+    <tr>
+      <th><img src='uploaded_Image/".$row['image_path']."'class='imgCart ' > 
+                    <p style='display: inline;'><b>".$row['description']." </b> </p></th>
+      <td><h5>".$row['price']." </h5></td>
+      <td><h5>".$row['quantity']." </h5></td>
+      <td><h5>".$row['price']." </h5></td>
+      <td><b><a href='' class='text-centers'><h4>X</h4></a></b></td>
+
+    </tr>
+    " 
+    ?>
+     <?php } ?>
+    
+  </tbody>
+  </table>
+</div>
+    </div>
 
            
-               <!-- product add and remove -->
-               <div class="row rowProducts">
-                <div class="col-md-6">
-                    <img src="images/2ndproduct.png" alt="" class="imgCart">
-                    <p><b>Lorem ipsum dolor sit amet</b> </p>
-                </div>
-                <div class="col-md-2">
-                    <h4>$130.00</h4>
-                </div>
-                <div class="col-md-2">
-                    <div class="ProductQty">
-                        <ul>
-                            <li><button class="cartQty">-</button></li>
-                            <li>
-                                <input type="text" class=" cartQty form-control" value="1" min="{5" } max=""
-                                    step="" required="required" title="">
-                            </li>
-                            <li><button class="cartQty">+</button></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-1">
-                    <h4>$130.00</h4>
-                </div>
-                <div class="col-md-1">
-                    <h4><b>X</b></h4>
-                </div>
-            </div>
 
-        
-           
-        </div>
-    </section>
 
     <!-- CART SECTION Ends-->
 

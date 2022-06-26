@@ -47,17 +47,17 @@ if(!isset($_SESSION['email'])){
                   <div class="collapse navbar-collapse navbar-center" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                       <li class="active">
-                        <a href="index.html">Home</a></li>
-                      <li><a id="about" href="aboutus.html">| About Us</a></li>
-                      <li><a  id="contact" href="products.html">| Shop</a></li>
-                      <li><a  id="shop" href="ContactUs.html">| Contact</a></li>
+                        <a href="index.php">Home</a></li>
+                      <li><a id="about" href="aboutus.php">| About Us</a></li>
+                      <li><a  id="contact" href="products.php">| Shop</a></li>
+                      <li><a  id="shop" href="ContactUs.php">| Contact</a></li>
                     </ul>
                    
                     <ul class="nav navbar-nav navbar-right">
                         <!-- <li><a href="">Log-out</a></li> -->
 
                         
-                        <li><a> <img src="images/profile.png" alt=""></a></li>
+                       
                         <li><a href=""><img src="images/Cart.png" alt=""></a></li>
                         <li><a href="backend/logoutAction.php"><img src="images/logout.png" height="20rem" width="25rem" alt=""></a></li>
 
@@ -110,7 +110,7 @@ if(!isset($_SESSION['email'])){
                 veniam omnis minus optio? Explicabo maiores quod non? Officia, explicabo commodi Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore fugit minus nemo ipsum mollitia sint temporibus quae blanditiis laboriosam doloribus repudiandae, vel hic aspernatur maxime. Voluptatibus voluptate consequuntur mollitia, suscipit ! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis, mollitia. Perferendis impedit neque aperiam tempora ut officiis repudiandae illo quaerat nisi aspernatur exercitationem quidem, nihil id ab totam, cum placeat Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus odio soluta enim vitae possimus doloribus tempore repudiandae consequatur expedita blanditiis molestiae eligendi, voluptatem alias quos illo reiciendis! Dolorum, adipisci sequi? Lorem ipsum dolor sit amet consectetur adipisicing elitSm eum et consequatur vero eius nemo.
 
                 <br><br>
-                <button>Learn More</button>
+                <button onclick="window.location='aboutus.php'">Learn More</button>
 
 
             </p> 
@@ -146,27 +146,40 @@ if(!isset($_SESSION['email'])){
             </div>
 
             <div class="row productDisplay">
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <img src="images/1stProduct.png" alt="">
-                    <h3 class="h3subHeading text-center">your heading here!</h3>
-                   
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <img src="images/2ndproduct.png" alt="">
-                    <h3 class="h3subHeading text-center">your heading here!</h3>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <img src="images/3rdProduct.png" alt="">
-                    <h3 class="h3subHeading text-center">your heading here!</h3>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <img src="images/4thProduct.png" alt="">
-                    <h3 class="h3subHeading text-center">your heading here!</h3>
-                 </div>
+               <!-- image Display using Php -->
+
+               <?php
+               include('backend/connection.php');
+                $sql="SELECT * FROM tbl_products  LIMIT 0,12";   //Limit 4
+                $result= mysqli_query($con,$sql);
+                while($row = mysqli_fetch_array($result)){
+                    
+                    $p_id=$row['id'];
+                    $p_name=$row['name'];
+
+                    // This whole php code can also be put in the function as well and then we will only call the funcion more effective way!!  
+
+                    ?>
+                
+                 <!-- SET DEDEFAULT HEIGHT AN DWIDTH TO DISPLAY ALL TYPES OF IMAGE IN ONE FORMATE -->
+
+
+
+                    <div class="col_Products col-md-3 col-sm-6 col-xs-12">
+                    <?php   echo"<img src='uploaded_Image/".$row['image_path']."'>";?>
+                    <?php  echo "   <h3>".$row['name']." </h3>" ?>
+                  
+                     
+                        <!--producr name detail will also be fetched from data base -->
+
+                        
+                    </div>
+                    <?php }?>
+             
             </div>'
         
             <div class="row btnView">
-                <button>View All</button>
+                <button onclick="window.location='products.php'">View All</button>
 
             </div>
         </div>
@@ -192,6 +205,10 @@ if(!isset($_SESSION['email'])){
                     Lorem ipsum dolor sit amet loremoris veniam 
                 </p>
             </div>
+
+            <br>
+            <br>
+            <br><br><br>
 
             <div class="row productDisplay catagorieDisplay">
               <div class="catProducts col-md-4 col-sm-6 col-xs-12">
