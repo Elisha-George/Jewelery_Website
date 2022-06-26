@@ -1,3 +1,11 @@
+
+<?php
+session_start();
+if(!isset($_SESSION['email'])){
+    header('location:login.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,18 +13,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Add To Cart</title>
+    <title>My Web</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
-    <link href="//db.onlinewebfonts.com/c/b903a10cbd02c30f0de8a49886eddcc0?family=CooperBTW01-Bold" rel="stylesheet"
-        type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+<link href="//db.onlinewebfonts.com/c/b903a10cbd02c30f0de8a49886eddcc0?family=CooperBTW01-Bold" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+    
 
     <!-- header starts -->
     <header>
@@ -46,8 +54,13 @@
                     </ul>
                    
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href=""><img src="images/profile.png" alt=""></a></li>
+                        <!-- <li><a href="">Log-out</a></li> -->
+
+                        
+                        <li><a> <img src="images/profile.png" alt=""></a></li>
                         <li><a href=""><img src="images/Cart.png" alt=""></a></li>
+                        <li><a href="backend/logoutAction.php"><img src="images/logout.png" height="20rem" width="25rem" alt=""></a></li>
+
                       </li>
                     </ul>
                   </div><!-- /.navbar-collapse -->
@@ -55,7 +68,6 @@
               </nav>
             </div>
         
-
     </header>
     <!-- header ends -->
 

@@ -1,3 +1,11 @@
+
+<?php
+session_start();
+if(!isset($_SESSION['email'])){
+    header('location:login.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,8 +54,13 @@
                     </ul>
                    
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href=""><img src="images/profile.png" alt=""></a></li>
+                        <!-- <li><a href="">Log-out</a></li> -->
+
+                        
+                        <li><a> <img src="images/profile.png" alt=""></a></li>
                         <li><a href=""><img src="images/Cart.png" alt=""></a></li>
+                        <li><a href="backend/logoutAction.php"><img src="images/logout.png" height="20rem" width="25rem" alt=""></a></li>
+
                       </li>
                     </ul>
                   </div><!-- /.navbar-collapse -->

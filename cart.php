@@ -1,3 +1,11 @@
+
+<?php
+session_start();
+if(!isset($_SESSION['email'])){
+    header('location:login.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,18 +13,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>LogIn</title>
+    <title>My Web</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
-    <link href="//db.onlinewebfonts.com/c/b903a10cbd02c30f0de8a49886eddcc0?family=CooperBTW01-Bold" rel="stylesheet"
-        type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+<link href="//db.onlinewebfonts.com/c/b903a10cbd02c30f0de8a49886eddcc0?family=CooperBTW01-Bold" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+    
 
     <!-- header starts -->
     <header>
@@ -46,8 +54,13 @@
                     </ul>
                    
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href=""><img src="images/profile.png" alt=""></a></li>
+                        <!-- <li><a href="">Log-out</a></li> -->
+
+                        
+                        <li><a> <img src="images/profile.png" alt=""></a></li>
                         <li><a href=""><img src="images/Cart.png" alt=""></a></li>
+                        <li><a href="backend/logoutAction.php"><img src="images/logout.png" height="20rem" width="25rem" alt=""></a></li>
+
                       </li>
                     </ul>
                   </div><!-- /.navbar-collapse -->
@@ -55,12 +68,8 @@
               </nav>
             </div>
         
-
     </header>
     <!-- header ends -->
-
-
-
 
 
 
@@ -68,11 +77,11 @@
     <!-- BANNER STARTS -->
 
 
-    <div class="LoginBanner">
+    <div class="cartBanner">
         <div class="contaier">
             <div class="row">
-                <div class="col-md-12  loginMid">
-                    <h2 class="h1Heading">Login </h2>
+                <div class="col-md-12  cartMid">
+                    <h1 class="h1Heading">Add To Cart</h1>
 
                 </div>
             </div>
@@ -84,68 +93,139 @@
 
 
 
-    <!-- LOGIN -->
+    <!-- CART SECTION STARTS-->
 
-    <section class="login_form">
+    <section class="Cart">
         <div class="container">
-            <div class="row no-gutter">
-                <div class="col-md-4 col_loginImage">
-                    <img class="LoginImage" src="images/loginImage-4.jpg" alt="">
-
+            <!-- Cart headings -->
+            <div class="row rowHead">
+                <div class="col-md-6">
+                    <h4><b>Products</b></h4>
                 </div>
-                <div class="col-md-6 colum_form">
-
-                    <form action="" method="password">
-
-                        <div class="col-md-6 col-xs-12 login_headCol">
-                            <img class="LoginLogo" src="images/loginLogo.png.crdownload" alt="">
-
-                            <h3 class="loginHead">Sign In To Your Account</h3>
-                        </div>
-
-                        <div class="form-row  no-gutter">
-                            <div class="col-md-7 col-sm-12 col_email">
-                            
-                             <label for="loginEmail" class="loginLables">Email</label>   
-                            <input class="loginInput" type="email" name="email" id="loginEmail" class="form-control" placeholder="John@gmail.com">
-                            </div>
-                        </div>
-
-                        <div class="form-row   no-gutter">
-                            <div class="col-md-7 col-sm-12 col_password">
-                             <label for="loginpassword"  class="loginLables">Password</label>   
-                            <input  class="loginInput" type="password" id="loginpassword" name="email" class="form-control" placeholder="**************">
-                            </div>
-                        </div>
-
-                        <div class="form-row no-gutter">
-                            <div class="col-md-7">
-                                <button type="submit" class="btnlogin"> LogIn</button>
-                            </div>
-                        </div>
-
-                
-                       
-                        </div>
-
-                      
-
-                    </form>
-
-
-
+                <div class="col-md-2">
+                    <h4><b>Price</b></h4>
+                </div>
+                <div class="col-md-2">
+                    <h4><b>Quantity</b></h4>
+                </div>
+                <div class="col-md-2">
+                    <h4><b>total</b></h4>
                 </div>
             </div>
+
+            <!-- product add and remove -->
+            <div class="row rowProducts">
+                <div class="col-md-6">
+                    <img src="images/1stProduct.png" alt="" class="imgCart">
+                    <p><b>Lorem ipsum dolor sit amet</b> </p>
+                </div>
+                <div class="col-md-2">
+                    <h4>$130.00</h4>
+                </div>
+                <div class="col-md-2">
+                    <div class="ProductQty">
+                        <ul>
+                            <li><button class="cartQty">-</button></li>
+                            <li>
+                                <input type="text" class=" cartQty form-control" value="1" min="{5" } max=""
+                                    step="" required="required" title="">
+                            </li>
+                            <li><button class="cartQty">+</button></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <h4>$130.00</h4>
+                </div>
+                <div class="col-md-1">
+                    <h4><b>X</b></h4>
+                </div>
+            </div>
+
+               <!-- product add and remove -->
+               <div class="row rowProducts">
+                <div class="col-md-6">
+                    <img src="images/3rdProduct.png" alt="" class="imgCart">
+                    <p><b>Lorem ipsum dolor sit amet</b> </p>
+                </div>
+                <div class="col-md-2">
+                    <h4>$130.00</h4>
+                </div>
+                <div class="col-md-2">
+                    <div class="ProductQty">
+                        <ul>
+                            <li><button class="cartQty">-</button></li>
+                            <li>
+                                <input type="text" class=" cartQty form-control" value="1" min="{5" } max=""
+                                    step="" required="required" title="">
+                            </li>
+                            <li><button class="cartQty">+</button></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <h4>$130.00</h4>
+                </div>
+                <div class="col-md-1">
+                    <h4><b>X</b></h4>
+                </div>
+            </div>
+
+           
+               <!-- product add and remove -->
+               <div class="row rowProducts">
+                <div class="col-md-6">
+                    <img src="images/2ndproduct.png" alt="" class="imgCart">
+                    <p><b>Lorem ipsum dolor sit amet</b> </p>
+                </div>
+                <div class="col-md-2">
+                    <h4>$130.00</h4>
+                </div>
+                <div class="col-md-2">
+                    <div class="ProductQty">
+                        <ul>
+                            <li><button class="cartQty">-</button></li>
+                            <li>
+                                <input type="text" class=" cartQty form-control" value="1" min="{5" } max=""
+                                    step="" required="required" title="">
+                            </li>
+                            <li><button class="cartQty">+</button></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <h4>$130.00</h4>
+                </div>
+                <div class="col-md-1">
+                    <h4><b>X</b></h4>
+                </div>
+            </div>
+
+               <!-- button -->
+               <div class="row cartButtons">
+                <div class="col-md-2">
+                    <button class="btnCart">Continue Shopping</button>
+                </div>
+                <div class="col-md-8"></div>
+                <div class="col-md-2">
+                    <button  class="btnCart">Update Cart</button>
+                </div>
+                
+            </div>
+        </div>
+
+           
+    
+           
         </div>
     </section>
 
-    <!-- LOGIN OR SIGNUP ENDS  -->
-
+    <!-- CART SECTION STARTS-->
 
 
 
      <!-- SHIPPING DETAILS -->
-<hr>
+
      <section>
         <div class="container">
             <div class="row">

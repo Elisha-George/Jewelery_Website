@@ -1,18 +1,19 @@
 <?php
 
-include ("connection.php");
+include('connection.php');
 
-if (isset($_POST['btnSignup'])) {
-    
-    $FirstName = $_POST['firstName'];
-    $LastName = $_POST['LastName'];
-    $Email = $_POST['email'];
+
+if(isset($_POST['btnSignup']))
+{
+    $Firstname=$_POST['firstName'];
+    $Lastname=$_POST['LastName'];
+    $email=$_POST['email'];
     $phoneNumber=$_POST['phonenumber'];
-    $Password = $_POST['password'];
+    $password=$_POST['password'];
     $confirmPassword=$_POST['confirm_password'];
-   
 
-$select= "select * from signup where email = '$Email'  && password = '$Password' ";
+
+$select= "select * from tbl_login where email = '$email'  && password = '$password' ";
 //echo($select);
 
 $result = mysqli_query($con, $select);
@@ -21,23 +22,40 @@ $result = mysqli_query($con, $select);
 
 if (mysqli_num_rows($result) > 0){
     $error[]= 'The user is already exist';
+    echo($error);
     
 }   
 // and if password is equls to confirm pasword
-else {
+else{
 
-    $insert ="INSERT INTO signup(firstName, lastName, email, password) 
-    VALUES ('$FirstName','$LastName','$Email','$Password')";
-    mysqli_query ($con, $insert);
-
-    if(mysqli_query($con,$insert))
+    if($password==$confirmPassword)
     {
-        echo "inserted";
+
+    $insert ="INSERT INTO `tbl_login`(`first_name`, `last_name`, `email`, `phoneNumber`, `password`) VALUES ('$Firstname','$Lastname','$email','$phoneNumber','$password')";
+  $res =  mysqli_query ($con, $insert);
+
+    if($res)
+    {
+        
+        header('location:../signup.php');
     }
     else{
         echo "not inserted";
     }
+   
+}
+else{
+    $error[]= 'Your Password Does not match';
+
+
+    }
+    
 }
 
+
 }
+
+
+
+
 ?>

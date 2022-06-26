@@ -41,7 +41,11 @@ html, body{
 
 
 /* NEW NAV */
+.navbar-right li a {
+    padding-right: 0;
 
+
+}
 .navbar{
     background-color: transparent;
     border: none;
@@ -1181,6 +1185,7 @@ margin-left: auto;
        
         width: 50%;
         margin: auto;
+        
     }
     .ShippingBlocks{
         display: none;

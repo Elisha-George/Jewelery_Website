@@ -135,9 +135,16 @@ include('backend\connection.php');
                 <!-- image Display using Php -->
 
                 <?php
-                $sql="SELECT * FROM tbl_products";   //Limit 4
+                $sql="SELECT * FROM tbl_products  LIMIT 0,12";   //Limit 4
                 $result= mysqli_query($con,$sql);
-                while($row = mysqli_fetch_array($result)){?>
+                while($row = mysqli_fetch_array($result)){
+                    
+                    $p_id=$row['id'];
+                    $p_name=$row['name'];
+
+                    // This whole php code can also be put in the function as well and then we will only call the funcion more effective way!!  
+
+                    ?>
                 
                  <!-- SET DEDEFAULT HEIGHT AN DWIDTH TO DISPLAY ALL TYPES OF IMAGE IN ONE FORMATE -->
 
@@ -145,8 +152,9 @@ include('backend\connection.php');
 
                     <div class="col_Products col-md-3 col-sm-6 col-xs-12">
                     <?php   echo"<img src='uploaded_Image/".$row['image_path']."'>";?>
-                        <h3>Product Heading!</h3> 
-                        <h3>Details!</h3>           
+                    <?php  echo "   <h3>".$row['name']." </h3>" ?>
+                    <?php  echo "   <h3>".$row['price']." </h3>" ?>  
+                  <a href="DetailsPage.php">  <button type="submit" name="btnDetails " class="btndetails btnReview">Details</button> </a>
                      
                         <!--producr name detail will also be fetched from data base -->
 

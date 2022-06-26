@@ -93,14 +93,14 @@ include('backend/signupAction.php');
     <!-- SIGNUP STARTS  -->
 
 <!-- <?php
-print $Show_ErrorAlert;
-if($Show_ErrorAlert==true)
-{
+// print $Show_ErrorAlert;
+// if($Show_ErrorAlert==true)
+// {
     
-echo '<div class="alert alert-warning alert-dismissible" role="alert">
- <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
- <strong>Warning! </strong> Ivalid Credentials, can not signin !!! </div>';
-}
+// echo '<div class="alert alert-warning alert-dismissible" role="alert">
+//  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+//  <strong>Warning! </strong> Ivalid Credentials, can not signin !!! </div>';
+// }
 ?> -->
 
    
@@ -330,7 +330,7 @@ echo '<div class="alert alert-warning alert-dismissible" role="alert">
 
             swal({
   title: "Good job!",
-  text: "You clicked the button!",
+  text: "You are successfully registered",
   icon: "success",
   button: "Aww yiss!",
 });
